@@ -1,1 +1,18 @@
 @import "tailwindcss";
+@font-face {
+  font-family: DMsans;
+  src: url("DMsans.ttf");
+}
+@font-face {
+  font-family: Poppins;
+  src: url("Poppins.ttf");
+}
+
+@theme {
+  --font-DMsans: DMsans, "sans-serif";
+  --font-Poppins: Poppins, "sans-serif";
+}
+
+h1 {
+  font-family: var(--font-Poppins);
+}
