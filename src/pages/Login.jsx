@@ -5,6 +5,11 @@ import TitleText from "../components/texts/TitleText";
 import { useState } from "react";
 import InputComponent from "../components/inputComponent";
 import NormalText from "../components/texts/NormalText";
+import SubmitButton from "../components/buttons/SubmitButton";
+import SecondaryLoginButton from "../components/buttons/SecondaryLoginButton";
+import { Link } from "react-router-dom";
+import AtauDesign from "../components/texts/AtauDesign";
+import GoogleButton from "../components/buttons/GoogleButton";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -36,6 +41,18 @@ const Login = () => {
             setText={setPassword}
             typeText="password"
           />
+          <a
+            href=""
+            className="text-[10px] md:text-[14px] mb-2 mt-[-15px] text-right font-DMsans"
+          >
+            Lupa Password?
+          </a>
+          <SubmitButton text={"Masuk"} />
+          <Link to={"/Register"}>
+            <SecondaryLoginButton text={"Daftar"} />
+          </Link>
+          <AtauDesign />
+          <GoogleButton />
         </form>
       </FormLayout>
     </div>
