@@ -1,9 +1,10 @@
 import NavbarLayout from "../layout/NavbarLayout";
 import Logo from "../assets/Logo.png";
 import FormLayout from "../layout/FormLayout";
-import TitleText from "../components/TitleText";
+import TitleText from "../components/texts/TitleText";
 import { useState } from "react";
 import InputComponent from "../components/inputComponent";
+import NormalText from "../components/texts/NormalText";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -18,13 +19,17 @@ const Login = () => {
       </NavbarLayout>
       <FormLayout>
         <TitleText text="Masuk ke Akun" />
-        <p className="text-[14px] md:text-[16px] text-[#333333AD] text-center">
-          Yuk, lanjutin belajarmu di videobelajar
-        </p>
+        <NormalText text={"Yuk, lanjutin belajarmu di videobelajar"} />
         <form action="" className="w-full flex flex-col">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email" className="flex flex-row">
+            <NormalText text={"E-Mail"} />
+            <p className="text-sm text-red-500">*</p>
+          </label>
           <InputComponent id={"email"} text={email} setText={setEmail} />
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password" className="flex flex-row">
+            <NormalText text={"Kata Sandi"} />
+            <p className="text-sm text-red-500">*</p>
+          </label>
           <InputComponent
             id={"password"}
             text={password}

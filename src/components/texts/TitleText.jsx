@@ -1,6 +1,6 @@
 const TitleText = ({ text }) => {
   return (
-    <h1 className="text-[#222325] font-semibold text-[24px] md:text-[32px]">
+    <h1 className="text-[#222325] font-semibold text-[18px] md:text-[28px]">
       {text}
     </h1>
   );
