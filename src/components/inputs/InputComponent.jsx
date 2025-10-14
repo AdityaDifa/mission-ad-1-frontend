@@ -1,6 +1,6 @@
 import { useState } from "react";
-import hidePassword from "../assets/hide-password.png";
-import viewPassword from "../assets/view-password.png";
+import hidePassword from "../../assets/hide-password.png";
+import viewPassword from "../../assets/view-password.png";
 
 const InputComponent = ({ id, text, setText, typeText = "text" }) => {
   const [hideStatus, setHideStatus] = useState("hidden");
@@ -25,7 +25,7 @@ const InputComponent = ({ id, text, setText, typeText = "text" }) => {
         type={typeInput}
         value={text}
         onChange={(e) => setText(e.target.value)}
-        className="border-1 border-gray-200 rounded-md h-[30px] py-2 pl-2 pr-10 mb-5 text-[10px] md:text-[14px] w-full"
+        className="border-1 border-gray-200 rounded-md h-[30px] py-2 pl-2 pr-10 text-[10px] md:text-[14px] w-full"
       />
       {typeText === "password" && (
         <button
