@@ -22,16 +22,21 @@ const InputPhoneNumber = ({ setFlag }) => {
     setFlag(e.target.value);
     const icon = document.getElementById("idFlag");
     const classIcon = flags.find((flag) => flag.number === e.target.value);
-    icon.className = classIcon.flag;
+    icon.className = `${classIcon.flag} text-[12px] md:text-[20px]`;
+    console.log(icon.className);
   };
 
   return (
-    <div className="flex w-full">
-      <div className="basis-1/3 bg-gray-400">
-        <span id="idFlag" className="fi fi-my"></span>
+    <>
+      <div className="basis-1/3 bg-gray-400 flex justify-center">
+        <span
+          id="idFlag"
+          className="fi fi-my text-[12px] md:text-[20px]"
+        ></span>
       </div>
-      <div className="basis-2/3">
+      <div className="basis-2/3 flex justify-end">
         <select
+          className="w-full h-full text-start text-[10px] md:text-[14px]"
           name="flag"
           id="flag"
           onChange={(e) => changeFlagIcon(e, setFlag)}
@@ -42,7 +47,7 @@ const InputPhoneNumber = ({ setFlag }) => {
           <option value="+63">+63</option>
         </select>
       </div>
-    </div>
+    </>
   );
 };
 export default InputPhoneNumber;

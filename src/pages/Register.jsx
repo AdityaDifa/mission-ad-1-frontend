@@ -46,12 +46,12 @@ const Register = () => {
             <NormalText text={"No. Hp"} />
             <p className="text-sm text-red-500">*</p>
           </label>
-          <div className=" w-full flex justify-between items-center gap-1">
-            <div className="basis-1/4 border-1">
+          <div className=" w-full h-full flex justify-between items-center gap-1">
+            <div className="basis-2/5 rounded-sm border border-gray-300 w-full h-[30px] flex">
               <InputPhoneNumber setFlag={setFlag} />
             </div>
             <InputComponent
-              className="basis-3/4"
+              className="basis-3/5"
               id={"phoneNumber"}
               text={phoneNumber}
               setText={setPhoneNumber}
