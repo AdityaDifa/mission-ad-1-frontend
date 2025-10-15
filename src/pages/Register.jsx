@@ -6,6 +6,10 @@ import NormalText from "../components/texts/NormalText";
 import { useState } from "react";
 import InputComponent from "../components/inputs/InputComponent";
 import InputPhoneNumber from "../components/inputs/InputPhoneNumber";
+import SubmitButton from "../components/buttons/SubmitButton";
+import SecondaryLoginButton from "../components/buttons/SecondaryLoginButton";
+import AtauDesign from "../components/texts/AtauDesign";
+import GoogleButton from "../components/buttons/GoogleButton";
 
 const Register = () => {
   const [fullName, setFullName] = useState("");
@@ -57,7 +61,42 @@ const Register = () => {
               setText={setPhoneNumber}
             />
           </div>
+          <br />
+          <label htmlFor="password" className="flex flex-row">
+            <NormalText text={"Kata Sandi"} />
+            <p className="text-sm text-red-500">*</p>
+          </label>
+          <InputComponent
+            id={"password"}
+            text={password}
+            setText={setPassword}
+            typeText="password"
+          />
+          <br />
+          <label htmlFor="confirmPassword" className="flex flex-row">
+            <NormalText text={"Konfirmasi Kata Sandi"} />
+            <p className="text-sm text-red-500">*</p>
+          </label>
+          <InputComponent
+            id={"confirmPassword"}
+            text={confirmPassword}
+            setText={setConfirmPassword}
+            typeText="password"
+          />
+          <br />
+          <a href="" className="text-end">
+            <p className="text-[10px] md:text-[14px] text-[#333333AD]">
+              Lupa Password?
+            </p>
+          </a>
+          <br />
+          <SubmitButton text={"Daftar"} />
         </form>
+        <div className="w-full">
+          <SecondaryLoginButton text={"Masuk"} />
+          <AtauDesign />
+          <GoogleButton />
+        </div>
       </FormLayout>
     </div>
   );
