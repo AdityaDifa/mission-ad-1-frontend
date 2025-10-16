@@ -12,6 +12,7 @@ import AtauDesign from "../components/texts/AtauDesign";
 import GoogleButton from "../components/buttons/GoogleButton";
 import RegisterHandle from "../services/RegisterHandle";
 import { useNavigate } from "react-router-dom";
+import LogoNavbar from "../layout/LogoNavbar";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -24,9 +25,7 @@ const Register = () => {
   return (
     <div className="flex flex-col h-screen">
       <NavbarLayout>
-        <div className="w-[50%]">
-          <img src={Logo} alt="" className="md:ml-20" />
-        </div>
+        <LogoNavbar />
       </NavbarLayout>
       <FormLayout>
         <TitleText text={"Pendaftaraan Akun"} />
