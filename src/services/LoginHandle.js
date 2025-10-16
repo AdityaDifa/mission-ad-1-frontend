@@ -1,19 +1,15 @@
-const alertUser = () => {
-  return alert("Account not found");
-};
-
-const LoginHandle = (e, email, password) => {
+const LoginHandle = (e, email, password, navigate) => {
   e.preventDefault();
-  const accounts = localStorage.getItem("account");
-  if (accounts == null) {
-    return alertUser();
+  const accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+
+  const found = accounts.find(
+    (acc) => acc.email === email && acc.password === password
+  );
+  if (found) {
+    localStorage.setItem("isLogged", true);
+    return navigate("/");
   }
-  for (const acc of accounts) {
-    if (acc.username === email && acc.password === password) {
-      localStorage.setItem("isLoggedIn", true);
-      return navigate("/");
-    }
-  }
-  alertUser;
+
+  return alert("account not found");
 };
 export default LoginHandle;

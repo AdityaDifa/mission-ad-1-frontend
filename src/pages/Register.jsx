@@ -10,8 +10,11 @@ import SubmitButton from "../components/buttons/SubmitButton";
 import SecondaryLoginButton from "../components/buttons/SecondaryLoginButton";
 import AtauDesign from "../components/texts/AtauDesign";
 import GoogleButton from "../components/buttons/GoogleButton";
+import RegisterHandle from "../services/RegisterHandle";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [flag, setFlag] = useState("+60");
@@ -28,7 +31,21 @@ const Register = () => {
       <FormLayout>
         <TitleText text={"Pendaftaraan Akun"} />
         <NormalText text={"Yuk, daftarkan akunnmu sekarang juga!"} />
-        <form className="w-full flex flex-col">
+        <form
+          className="w-full flex flex-col"
+          onSubmit={(e) =>
+            RegisterHandle(
+              e,
+              fullName,
+              email,
+              flag,
+              phoneNumber,
+              password,
+              confirmPassword,
+              navigate
+            )
+          }
+        >
           <label htmlFor="fullName" className="flex flex-row mt-5 md:mt-10">
             <NormalText text={"Nama Lengkap"} />
             <p className="text-sm text-red-500">*</p>

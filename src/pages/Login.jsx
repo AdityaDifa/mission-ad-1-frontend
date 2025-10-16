@@ -7,7 +7,7 @@ import InputComponent from "../components/inputs/InputComponent";
 import NormalText from "../components/texts/NormalText";
 import SubmitButton from "../components/buttons/SubmitButton";
 import SecondaryLoginButton from "../components/buttons/SecondaryLoginButton";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AtauDesign from "../components/texts/AtauDesign";
 import GoogleButton from "../components/buttons/GoogleButton";
 import LoginHandle from "../services/LoginHandle";
@@ -15,7 +15,7 @@ import LoginHandle from "../services/LoginHandle";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col h-screen">
       <NavbarLayout>
@@ -28,7 +28,7 @@ const Login = () => {
         <NormalText text={"Yuk, lanjutin belajarmu di videobelajar"} />
         <form
           className="w-full flex flex-col"
-          onSubmit={(e) => LoginHandle(e, email, password)}
+          onSubmit={(e) => LoginHandle(e, email, password, navigate)}
         >
           <label htmlFor="email" className="flex flex-row">
             <NormalText text={"E-Mail"} />
