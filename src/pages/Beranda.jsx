@@ -5,6 +5,7 @@ import NavbarLayout from "../layout/NavbarLayout";
 import NavbarMenu from "../layout/NavbarMenu";
 import BoardInformation from "../layout/BoardInformation";
 import gambarBeranda from "../assets/gambar-beranda.jpg";
+import ClassList from "../layout/ClassList";
 
 const Beranda = () => {
   const classMenuButton = (e) => {
@@ -41,7 +42,7 @@ const Beranda = () => {
             Temukan Video Course untuk Dipelajari!
           </button>
         </BoardInformation>
-        <div className="py-4 md:py-8">
+        <div className="my-5">
           <h1 className="font-bold text-lg tracking-wide">
             Koleksi Video Pembelajaran Unggulan
           </h1>
@@ -51,7 +52,7 @@ const Beranda = () => {
         </div>
         <div
           id="classMenu"
-          className="flex gap-8 overflow-scroll text-sm whitespace-nowrap p-2"
+          className="flex gap-8 overflow-scroll md:overflow-auto text-sm whitespace-nowrap p-2 mb-5"
           style={{ scrollbarColor: "#f64920" }}
         >
           <button onClick={classMenuButton} className="text-[#F64920]">
@@ -62,6 +63,7 @@ const Beranda = () => {
           <button onClick={classMenuButton}>Pengembangan Diri</button>
           <button onClick={classMenuButton}>Bisni</button>
         </div>
+        <ClassList />
       </MainLayout>
     </div>
   );
