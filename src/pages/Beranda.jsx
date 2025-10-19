@@ -7,6 +7,18 @@ import BoardInformation from "../layout/BoardInformation";
 import gambarBeranda from "../assets/gambar-beranda.jpg";
 
 const Beranda = () => {
+  const classMenuButton = (e) => {
+    const buttons = document
+      .getElementById("classMenu")
+      .querySelectorAll("button");
+
+    buttons.forEach((btn) => {
+      btn.classList = "";
+    });
+
+    e.target.classList.add("text-[#F64920]");
+  };
+
   return (
     <div className="flex flex-col h-screen">
       <NavbarLayout>
@@ -29,6 +41,27 @@ const Beranda = () => {
             Temukan Video Course untuk Dipelajari!
           </button>
         </BoardInformation>
+        <div className="py-4 md:py-8">
+          <h1 className="font-bold text-lg tracking-wide">
+            Koleksi Video Pembelajaran Unggulan
+          </h1>
+          <p className="text-sm font-light py-2">
+            Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!
+          </p>
+        </div>
+        <div
+          id="classMenu"
+          className="flex gap-8 overflow-scroll text-sm whitespace-nowrap p-2"
+          style={{ scrollbarColor: "#f64920" }}
+        >
+          <button onClick={classMenuButton} className="text-[#F64920]">
+            Semua Kelas
+          </button>
+          <button onClick={classMenuButton}>Pemasaran</button>
+          <button onClick={classMenuButton}>Desain</button>
+          <button onClick={classMenuButton}>Pengembangan Diri</button>
+          <button onClick={classMenuButton}>Bisni</button>
+        </div>
       </MainLayout>
     </div>
   );

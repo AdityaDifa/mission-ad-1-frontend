@@ -51,7 +51,7 @@ const NavbarMenu = () => {
 
   const CardDropdownMenu = ({ text }) => {
     return (
-      <div className="p-2 hover:bg-gray-300 border-b-2 border-black/10">
+      <div className="p-2 hover:bg-gray-300 border-b-2 border-black/10 bg-white">
         <p className="text-left">{text}</p>
       </div>
     );
@@ -67,7 +67,7 @@ const NavbarMenu = () => {
         <CardDropdownMenu text={"Profil Saya"} />
         <CardDropdownMenu text={"Kelas Saya"} />
         <CardDropdownMenu text={"Pesanan Saya"} />
-        <div className="p-2 hover:bg-gray-300 border-b-2 border-black/10">
+        <div className="p-2 hover:bg-gray-300 border-b-2 border-black/10 bg-white">
           <p className="text-left text-red-500">Keluar</p>
         </div>
       </div>
