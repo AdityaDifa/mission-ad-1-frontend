@@ -1,7 +1,7 @@
 import MainLayout from "../layout/MainLayout";
 import LogoNavbar from "../layout/LogoNavbar";
 import NavbarLayout from "../layout/NavbarLayout";
-
+import board2 from "../assets/board-2.jpg";
 import NavbarMenu from "../layout/NavbarMenu";
 import BoardInformation from "../layout/BoardInformation";
 import gambarBeranda from "../assets/gambar-beranda.jpg";
@@ -67,6 +67,31 @@ const Beranda = () => {
           <button onClick={classMenuButton}>Bisnis</button>
         </div>
         <ClassList />
+        <br />
+        <BoardInformation backgroundImage={board2}>
+          <div className="py-5 lg:px-40">
+            <h1 className="text-[#C1C2C4] uppercase text-center text-base md:my-3">
+              NewsLetter
+            </h1>
+            <h1 className="text-white text-center font-bold text-base tracking-wide md:my-3">
+              Mau Belajar Lebih Banyak?
+            </h1>
+            <p className="text-[#F4F5FA] text-center text-sm md:my-3">
+              Daftarkan dirimu untuk mendapatkan informasi terbaru dan penawaran
+              spesial dari program-program terbaik hariesok.id
+            </p>
+            <div className="my-2 md:relative">
+              <input
+                type="text"
+                className="border bg-white w-full h-10 px-5 py-2 text-sm rounded-md"
+                placeholder="Masukan Emailmu"
+              />
+              <button className="bg-[#FFBD3A] text-white h-8 p-2 rounded-md md:absolute right-10 top-1 flex items-center justify-center w-full md:w-auto my-1 md:my-0">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </BoardInformation>
       </MainLayout>
     </div>
   );
