@@ -17,7 +17,7 @@ const Beranda = () => {
       btn.classList = "";
     });
 
-    e.target.classList.add("text-[#F64920]");
+    e.target.classList.add("text-[#F64920]", "font-bold");
   };
 
   return (
@@ -55,13 +55,16 @@ const Beranda = () => {
           className="flex gap-8 overflow-scroll md:overflow-auto text-sm whitespace-nowrap p-2 mb-5"
           style={{ scrollbarColor: "#f64920" }}
         >
-          <button onClick={classMenuButton} className="text-[#F64920]">
+          <button
+            onClick={classMenuButton}
+            className="text-[#F64920] font-bold"
+          >
             Semua Kelas
           </button>
           <button onClick={classMenuButton}>Pemasaran</button>
           <button onClick={classMenuButton}>Desain</button>
           <button onClick={classMenuButton}>Pengembangan Diri</button>
-          <button onClick={classMenuButton}>Bisni</button>
+          <button onClick={classMenuButton}>Bisnis</button>
         </div>
         <ClassList />
       </MainLayout>
