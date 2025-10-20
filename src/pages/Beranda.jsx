@@ -6,6 +6,7 @@ import NavbarMenu from "../layout/NavbarMenu";
 import BoardInformation from "../layout/BoardInformation";
 import gambarBeranda from "../assets/gambar-beranda.jpg";
 import ClassList from "../layout/ClassList";
+import FooterLayout from "../layout/FooterLayout";
 
 const Beranda = () => {
   const classMenuButton = (e) => {
@@ -21,7 +22,7 @@ const Beranda = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col">
       <NavbarLayout>
         <LogoNavbar />
         <NavbarMenu />
@@ -73,26 +74,27 @@ const Beranda = () => {
             <h1 className="text-[#C1C2C4] uppercase text-center text-base md:my-3">
               NewsLetter
             </h1>
-            <h1 className="text-white text-center font-bold text-base tracking-wide md:my-3">
+            <h1 className="text-white text-center font-bold text-xl tracking-wide md:my-3">
               Mau Belajar Lebih Banyak?
             </h1>
             <p className="text-[#F4F5FA] text-center text-sm md:my-3">
               Daftarkan dirimu untuk mendapatkan informasi terbaru dan penawaran
               spesial dari program-program terbaik hariesok.id
             </p>
-            <div className="my-2 md:relative">
+            <div className="my-2 md:relative md:flex md:justify-center">
               <input
                 type="text"
-                className="border bg-white w-full h-10 px-5 py-2 text-sm rounded-md"
+                className="border bg-white  w-full md:w-[75%] h-10 px-5 py-2 text-sm rounded-md"
                 placeholder="Masukan Emailmu"
               />
-              <button className="bg-[#FFBD3A] text-white h-8 p-2 rounded-md md:absolute right-10 top-1 flex items-center justify-center w-full md:w-auto my-1 md:my-0">
+              <button className="bg-[#FFBD3A] text-white h-8 p-2 rounded-md md:absolute right-[15%] top-1 flex items-center justify-center w-full md:w-auto my-1 md:my-0">
                 Subscribe
               </button>
             </div>
           </div>
         </BoardInformation>
       </MainLayout>
+      <FooterLayout />
     </div>
   );
 };

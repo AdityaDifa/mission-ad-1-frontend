@@ -19,3 +19,8 @@ h1 {
 p {
   font-family: var(--font-DMsans);
 }
+
+html,
+body {
+  height: 100%;
+}

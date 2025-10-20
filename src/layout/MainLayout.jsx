@@ -1,6 +1,6 @@
 const MainLayout = ({ children }) => {
   return (
-    <main className="bg-[#fffdf3] flex justify-center w-full h-screen">
+    <main className="bg-[#fffdf3] flex justify-center w-full">
       <section className="px-3 md:px-30 py-4 md:py-12 flex flex-col justify-center h-fit w-full">
         {children}
       </section>
