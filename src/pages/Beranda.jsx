@@ -33,13 +33,13 @@ const Beranda = () => {
             Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video
             Interaktif!
           </h1>
-          <p className="text-white text-center text-xs mt-2 tracking-wide font-extralight">
+          <p className="text-white text-center text-xs md:text-base mt-2 tracking-wide font-extralight">
             Temukan ilmu baru yang menarik dan mendalam melalui koleksi video
             pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat
             berpartisipasi dalam latihan interaktif yang akan meningkatkan
             pemahaman Anda.
           </p>
-          <button className="bg-[#3ECF4C] my-5 w-fit self-center  rounded-md p-2 md:px-7 text-white md:font-semibold text-[12px]">
+          <button className="bg-[#3ECF4C] my-5 w-fit self-center  rounded-md p-2 md:px-7 text-white md:font-semibold text-[12px] md:text-base">
             Temukan Video Course untuk Dipelajari!
           </button>
         </BoardInformation>
